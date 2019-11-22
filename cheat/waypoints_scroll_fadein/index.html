@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> Waypoints </title>
+<!-- 任意のCSSを読み込む -->
+<link rel="stylesheet" href="assets/style.css">
+<!-- fontawesomeからスクリプト取得 -->
+<script src="https://kit.fontawesome.com/7c414374ac.js" crossorigin="anonymous"></script>
+<!-- グーグルからライブラリを取得 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+<header id="header">
+    <h1>Waypoints</h1>
+</header>
+<p id="text">jQuery Waypoints Demo</p>
+<div id="content">
+    <div id="wrapper">
+        <section class="section">
+            <figure class="thumb"><img src="img/thumb1.jpg"></figure>
+            <h2>Title</h2>
+            <p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
+        </section>
+ 
+        <section class="section">
+            <figure class="thumb"><img src="img/thumb2.jpg"></figure>
+            <h2>Title</h2>
+            <p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
+        </section>
+ 
+        <section class="section">
+            <figure class="thumb"><img src="img/thumb3.jpg"></figure>
+            <h2>Title</h2>
+            <p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</p>
+        </section>
+    </div>
+</div>
+<script src="lib/jquery.waypoints.min.js"></script>
+<script>
+$('.section').css({position:'relative', top:'8px', opacity: 0});
+ 
+var i = 0;
+var length = $('.section').length;
+var int;
+ 
+function doThis(){
+    if(i >= length){
+        clearInterval(int);
+    }else{
+        $('.section').eq(i).stop().animate({top:'0px', opacity: 1}, 1000);
+        i++;
+    }
+}
+ 
+$(function(){
+    $('#wrapper').waypoint(function(){
+        int = setInterval('doThis(i)', 500);
+    },{
+        offset : '95%'
+    });
+});
+</script>
+</body>
+</html>

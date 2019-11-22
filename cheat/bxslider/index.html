@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> bxslider </title>
+<script src="https://kit.fontawesome.com/7c414374ac.js" crossorigin="anonymous"></script>
+<!-- グーグルからライブラリを取得 -->
+<link rel="stylesheet" href="assets/bxslider/dist/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="assets/bxslider/dist/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+
+<!-- スライダーの要素  -->
+<div class="slider">
+  <div>I am a slide.</div>
+  <div>I am another slide.</div>
+  <div>b</div>
+  <div>c</div>
+  <div>d</div>
+  <div>e</div>
+</div>
+
+<!-- スライダーのスクリプト始動 -->
+<script>
+  $(document).ready(function(){
+    $('.slider').bxSlider({
+     auto: true,
+     pause: 2000,
+    speed: 500,
+    //一度に表示させる最大枚数
+    maxSlides: 1,
+    //タッチスワイプ許可設定
+    touchEnabled: true,
+    //タッチスワイプしたとみなす最低限の移動距離
+    swipeThreshold: 10,
+    //'full'はスライダーの数を黒点で、'short'はa/nで表示
+    pagerType: 'full',
+    // 画像の高さを自動調整
+    adaptiveHeight: true,
+    });
+  });
+</script>
+</body>
+</html>

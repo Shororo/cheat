@@ -1,0 +1,18 @@
+.click-here{
+	dsplay: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: pink;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 30px;
+
+}
+.youso { 
+	background:#3d9a44; 
+	margin:3px; 
+	width:80px;
+	height:40px; 
+	/* 最初は要素を隠しておく */
+	display: none;
+}

@@ -1,0 +1,49 @@
+/* フェードイン */
+.fade{
+	display: none;
+}
+
+/* スライドイン */
+.showDown{
+  opacity: 0;
+  transition: .7s;
+  margin-top: 60px;
+}
+.showUp{
+  opacity: 1;
+  margin-top: 0;
+}
+
+/* スライドアウト
+   cssの記述順をスライドインの場合と逆にしなくてはいけない
+*/
+.showUp2{
+  opacity: 1;
+  transition: .7s;
+  margin-top: 0;
+}
+.showDown2{
+  opacity: 0;
+  margin-top: 60px;
+}
+
+/* インアウト */
+.showDown3{
+  opacity: 0;
+  transition: .7s;
+  margin-top: 60px;
+}
+.showUp3{
+  opacity: 1;
+  margin-top: 0;
+}
+
+button{
+	display:block;
+}
+.youso{
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	background-color: pink;
+}

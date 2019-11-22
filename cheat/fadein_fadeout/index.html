@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SlideIn_Out</title>
+<link rel="stylesheet" href="assets/style.css">
+<!-- グーグルからライブラリを取得 -->
+<script <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+ 
+<button class="button-fade">フェードイン</button>
+<div class="fade youso">
+  <p>Fade In !</p>
+  <p>Fade In !</p>
+  <p>Fade In !</p>
+</div>
+
+<button class="button-slidein">スライドイン</button>
+<div class="showDown youso">
+  <p>Fade In !</p>
+  <p>Fade In !</p>
+  <p>Fade In !</p>
+</div>
+
+<button class="button-slideout">スライドアウト</button>
+<div class="showUp2 youso">
+  <p>Fade Out !</p>
+  <p>Fade Out !</p>
+  <p>Fade Out !</p>
+</div>
+
+<button class="button-repeat">インアウト</button>
+<div class="showDown3 youso">
+  <p>Fade Out !</p>
+  <p>Fade Out !</p>
+  <p>Fade Out !</p>
+</div>
+
+<script>
+$(function() {
+  //'フェードイン'をクリックしたら発動
+  $('.button-fade').click(function() {
+    // 0.5秒でフェードイン
+    $('.fade').fadeIn('0.5');
+    //フェードアウトしたい場合はfadeOut('任意');
+  });
+  
+  //'スライド'をクリックしたら発動
+  $(".button-slidein").click(function(){
+  //.showUpクラスを追加することで.slideのcss設定を上書き
+  	$(".showDown").addClass("showUp");
+  });
+  
+  //'フェードアウト'をクリックしたら発動
+  $(".button-slideout").click(function(){
+  //.showUpクラスを追加することで.slideのcss設定を上書き
+  	$(".showUp2").addClass("showDown2");
+  });
+  
+  //'インアウト'をクリックしたら発動
+  $(".button-repeat").click(function(){
+  //.toggleClassで動作を繰り返すことができる
+  	$(".showDown3").toggleClass("showUp3");
+  });
+  	
+});
+</script>
+
+</body>
+</html>
